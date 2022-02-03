@@ -1,11 +1,6 @@
-## Docker and SQL
-
-Notes I used for preparing the videos: [link](https://docs.google.com/document/d/e/2PACX-1vRJUuGfzgIdbkalPgg2nQ884CnZkCg314T_OBq-_hfcowPxNIA0-z5OtMTDzuzute9VBHMjNYZFTCc1/pub)
-
 
 ## Commands 
 
-All the commands from the video
 
 Downloading the data
 
@@ -239,8 +234,3 @@ services:
       - ./data_pgadmin:/var/lib/pgadmin
     ...
 ```
-
-
-### SQL 
-
-Coming soon!
