@@ -3,17 +3,17 @@ locals {
 }
 
 variable "project" {
-  description = "Your GCP Project ID"
+  description = "GCP Project ID"
 }
 
 variable "region" {
-  description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "europe-west6"
+  description = "Region for GCP resources"
+  default = "asia-east2-a	"
   type = string
 }
 
 variable "storage_class" {
-  description = "Storage class type for your bucket. Check official docs for more info."
+  description = "Storage class type for your bucket."
   default = "STANDARD"
 }
 
