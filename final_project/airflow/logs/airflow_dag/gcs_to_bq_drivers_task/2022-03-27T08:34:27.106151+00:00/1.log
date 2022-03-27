@@ -1,0 +1,96 @@
+[2022-03-27 08:34:37,535] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: airflow_dag.gcs_to_bq_drivers_task manual__2022-03-27T08:34:27.106151+00:00 [queued]>
+[2022-03-27 08:34:37,549] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: airflow_dag.gcs_to_bq_drivers_task manual__2022-03-27T08:34:27.106151+00:00 [queued]>
+[2022-03-27 08:34:37,550] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-27 08:34:37,551] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-03-27 08:34:37,552] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-27 08:34:37,572] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): gcs_to_bq_drivers_task> on 2022-03-27 08:34:27.106151+00:00
+[2022-03-27 08:34:37,578] {standard_task_runner.py:52} INFO - Started process 72 to run task
+[2022-03-27 08:34:37,591] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', '***_dag', 'gcs_to_bq_drivers_task', 'manual__2022-03-27T08:34:27.106151+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/***_dag.py', '--cfg-path', '/tmp/tmpqdjdh392', '--error-file', '/tmp/tmpmbl91a72']
+[2022-03-27 08:34:37,597] {standard_task_runner.py:77} INFO - Job 129: Subtask gcs_to_bq_drivers_task
+[2022-03-27 08:34:37,680] {logging_mixin.py:109} INFO - Running <TaskInstance: ***_dag.gcs_to_bq_drivers_task manual__2022-03-27T08:34:27.106151+00:00 [running]> on host 5159563b36f9
+[2022-03-27 08:34:37,756] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Sourav Saha
+AIRFLOW_CTX_DAG_ID=***_dag
+AIRFLOW_CTX_TASK_ID=gcs_to_bq_drivers_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-27T08:34:27.106151+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-03-27T08:34:27.106151+00:00
+[2022-03-27 08:34:37,761] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-03-27 08:34:37,768] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python3 /opt/***/dags/gcs_to_bq_drivers.py']
+[2022-03-27 08:34:37,798] {subprocess.py:85} INFO - Output:
+[2022-03-27 08:34:40,000] {subprocess.py:89} INFO - Traceback (most recent call last):
+[2022-03-27 08:34:40,001] {subprocess.py:89} INFO -   File "/opt/***/dags/gcs_to_bq_drivers.py", line 26, in <module>
+[2022-03-27 08:34:40,002] {subprocess.py:89} INFO -     main()
+[2022-03-27 08:34:40,003] {subprocess.py:89} INFO -   File "/opt/***/dags/gcs_to_bq_drivers.py", line 17, in main
+[2022-03-27 08:34:40,004] {subprocess.py:89} INFO -     uri, table_id, job_config=job_config
+[2022-03-27 08:34:40,005] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 2351, in load_table_from_uri
+[2022-03-27 08:34:40,005] {subprocess.py:89} INFO -     load_job._begin(retry=retry, timeout=timeout)
+[2022-03-27 08:34:40,006] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 517, in _begin
+[2022-03-27 08:34:40,008] {subprocess.py:89} INFO -     timeout=timeout,
+[2022-03-27 08:34:40,010] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+[2022-03-27 08:34:40,012] {subprocess.py:89} INFO -     return call()
+[2022-03-27 08:34:40,013] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 291, in retry_wrapped_func
+[2022-03-27 08:34:40,014] {subprocess.py:89} INFO -     on_error=on_error,
+[2022-03-27 08:34:40,014] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 189, in retry_target
+[2022-03-27 08:34:40,016] {subprocess.py:89} INFO -     return target()
+[2022-03-27 08:34:40,017] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/cloud/_http.py", line 480, in api_request
+[2022-03-27 08:34:40,018] {subprocess.py:89} INFO -     timeout=timeout,
+[2022-03-27 08:34:40,019] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/cloud/_http.py", line 338, in _make_request
+[2022-03-27 08:34:40,020] {subprocess.py:89} INFO -     method, url, headers, data, target_object, timeout=timeout
+[2022-03-27 08:34:40,022] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/cloud/_http.py", line 376, in _do_request
+[2022-03-27 08:34:40,033] {subprocess.py:89} INFO -     url=url, method=method, headers=headers, data=data, timeout=timeout
+[2022-03-27 08:34:40,035] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/auth/transport/requests.py", line 476, in request
+[2022-03-27 08:34:40,039] {subprocess.py:89} INFO -     self.credentials.before_request(auth_request, method, url, request_headers)
+[2022-03-27 08:34:40,044] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/auth/credentials.py", line 133, in before_request
+[2022-03-27 08:34:40,046] {subprocess.py:89} INFO -     self.refresh(request)
+[2022-03-27 08:34:40,047] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/oauth2/service_account.py", line 409, in refresh
+[2022-03-27 08:34:40,048] {subprocess.py:89} INFO -     request, self._token_uri, assertion
+[2022-03-27 08:34:40,052] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 193, in jwt_grant
+[2022-03-27 08:34:40,053] {subprocess.py:89} INFO -     response_data = _token_endpoint_request(request, token_uri, body)
+[2022-03-27 08:34:40,055] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 165, in _token_endpoint_request
+[2022-03-27 08:34:40,056] {subprocess.py:89} INFO -     _handle_error_response(response_data)
+[2022-03-27 08:34:40,057] {subprocess.py:89} INFO -   File "/home/***/.local/lib/python3.7/site-packages/google/oauth2/_client.py", line 60, in _handle_error_response
+[2022-03-27 08:34:40,058] {subprocess.py:89} INFO -     raise exceptions.RefreshError(error_details, response_data)
+[2022-03-27 08:34:40,060] {subprocess.py:89} INFO - google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+[2022-03-27 08:34:40,261] {subprocess.py:93} INFO - Command exited with return code 1
+[2022-03-27 08:34:40,285] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 188, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-03-27 08:34:40,301] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=***_dag, task_id=gcs_to_bq_drivers_task, execution_date=20220327T083427, start_date=20220327T083437, end_date=20220327T083440
+[2022-03-27 08:34:40,333] {standard_task_runner.py:92} ERROR - Failed to execute job 129 for task gcs_to_bq_drivers_task
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 188, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2022-03-27 08:34:40,375] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-03-27 08:34:40,428] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
